@@ -1,5 +1,11 @@
 const { Sequelize } = require('sequelize');
 
+console.log('--- DATABASE CONFIG CHECK ---');
+console.log('DB_HOST:', process.env.DB_HOST ? `Present (${process.env.DB_HOST})` : 'MISSING / UNDEFINED');
+console.log('DB_NAME:', process.env.DB_NAME ? 'Present' : 'MISSING / UNDEFINED');
+console.log('DB_USER:', process.env.DB_USER ? 'Present' : 'MISSING / UNDEFINED');
+console.log('-----------------------------');
+
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
