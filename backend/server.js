@@ -25,7 +25,7 @@ app.get('/healthcheck', async (req, res) => {
   } catch (error) {
     res.status(503).json({ status: 'DOWN', message: 'Backend server is running but database connection failed.', error: error.message });
   }
-});
+}); 
 
 // Database connection and server start
 const PORT = process.env.PORT || 8000;
