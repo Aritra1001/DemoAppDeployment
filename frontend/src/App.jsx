@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 console.log("env url", import.meta.env.VITE_API_URL)
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'; 
+const API_URL = import.meta.env.VITE_API_URL; 
 
 function App() {
   const [tasks, setTasks] = useState([]);
